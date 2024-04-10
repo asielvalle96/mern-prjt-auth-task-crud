@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "3ba3f285-eeca-41af-bb4b-f5fa23090dfa",
+		"name": "mern_pjt_crud_auth_tasks_app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30181178"
+	},
+	"item": [
+		{
+			"name": "Tasks",
+			"item": [
+				{
+					"name": "getTasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/tasks"
+					},
+					"response": []
+				},
+				{
+					"name": "createTask",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Wash the car\",\r\n    \"description\": \"I need to wash the car in the afternoon\",\r\n    \"date\": \"2023-12-03T21:35:45.383Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/task"
+					},
+					"response": []
+				},
+				{
+					"name": "getTask :id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/task/656cf3854f42aad6d68984ee"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteTask",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3000/api/task/656cf4a64f42aad6d68984f2"
+					},
+					"response": []
+				},
+				{
+					"name": "updateTask",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Get the mail at 6:00pm\",\r\n    \"description\": \"I have get the mail today.\",\r\n    \"date\": \"2023-12-03T15:47:26.765Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/task/656cf3854f42aad6d68984ee"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"valle\",\r\n    \"email\": \"valle@gmail.com\",\r\n    \"password\": \"valle1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/register"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"valle@gmail.com\",\r\n    \"password\": \"valle1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/login"
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:3000/api/logout"
+			},
+			"response": []
+		},
+		{
+			"name": "profile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/api/profile"
+			},
+			"response": []
+		}
+	]
+}
